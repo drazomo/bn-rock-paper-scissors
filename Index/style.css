@@ -1,0 +1,55 @@
+:root {
+    --font-size: 1.2rem;
+    --bg-key-color: #444B54;
+    --txt-color: #FFFFFF;
+    --calc-padding: 10px;
+    --calc-border-radius: 10px;
+  }
+
+.calculator__section {
+    background-color: #C4C4C4;
+    width: 20rem;
+    height: 20rem;
+    padding: 20px;
+    border-radius: var(--calc-border-radius);
+    margin: auto;
+}
+.calculator__screen {
+    width: 19rem;
+    height: 2rem;
+    background-color: var(--bg-key-color);
+    border-radius: var(--calc-border-radius);
+    padding: var(--calc-padding);
+    color: var(--txt-color);
+    font-size: var(--font-size);
+    text-align: right;
+    margin-bottom: 20px;
+}
+.calculator__keys {
+    background-color: var(--bg-key-color);
+    color: var(--txt-color);
+    font-size: var(--font-size);
+    width: 20rem;
+    padding: var(--calc-padding);
+    border-radius: var(--calc-border-radius);
+    text-align: center;
+}
+.calculator__keys td {
+    width: 2rem;
+    padding: var(--calc-padding);
+    border-radius: 5px;
+    background-color: var(--bg-key-color);
+    color: var(--txt-color);
+}
+.calculator__keys td:hover {
+    background-color: #8a9aaf;
+    color: var(--txt-color);
+}
+
+button {
+    background: none;
+    border: none;
+    font-size: var(--font-size);
+    color: var(--txt-color);
+}
+
