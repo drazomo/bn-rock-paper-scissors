@@ -36,6 +36,7 @@ body {
                          "selection__windows selection__windows"
                          "user__score--title computer__score--title"
                          "user__score--window computer__score--window"
+                         "play__button play__button";                         
     grid-template-rows: 1.5fr 1fr 5fr 5fr 1fr 2fr 1fr 2fr 3fr;
     gap: 0.5rem;
     height: 35rem;
