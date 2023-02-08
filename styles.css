@@ -1,20 +1,38 @@
-@font-face{
+@font-face {
     font-family: 'digital-7';
     src: url('./fonts/digital-7.ttf') format('truetype');
-  }
-@font-face{
+}
+
+@font-face {
     font-family: 'soldier';
     src: url('./fonts/soldier.ttf') format('truetype');
-  }
-  @font-face{
+}
+
+@font-face {
     font-family: 'tarrgetlaser';
     src: url('./fonts/tarrgetlaser.ttf') format('truetype');
-  }
+}
+
+@font-face {
+    font-family: 'digital-7';
+    src: url('./fonts/digital-7.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'soldier';
+    src: url('./fonts/soldier.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'tarrgetlaser';
+    src: url('./fonts/tarrgetlaser.ttf') format('truetype');
+}
+
 
 * {
     font-size: 20px;
     padding: 0;
-    margin: 0;    
+    margin: 0;
 }
 
 body {
@@ -30,13 +48,13 @@ body {
     border-radius: 10px;
     display: grid;
     grid-template-areas: "banner banner"
-                         "select__bar select__bar"                         
-                         "selectors selectors"
-                         "user__selection--title computer__selection--title"
-                         "selection__windows selection__windows"
-                         "user__score--title computer__score--title"
-                         "user__score--window computer__score--window"
-                         "play__button play__button";                         
+        "select__bar select__bar"
+        "selectors selectors"
+        "user__selection--title computer__selection--title"
+        "selection__windows selection__windows"
+        "user__score--title computer__score--title"
+        "user__score--window computer__score--window"
+        "play__button play__button";
 
     grid-template-rows: 1.5fr 1fr 5fr 5fr 1fr 2fr 1fr 2fr 3fr;
     gap: 0.5rem;
@@ -46,20 +64,7 @@ body {
     box-shadow: .5rem .5rem 20px rgb(0, 0, 0);
 }
 
-@font-face{
-    font-family: 'digital-7';
-    src: url('./fonts/digital-7.ttf') format('truetype');
-  }
-@font-face{
-    font-family: 'soldier';
-    src: url('./fonts/soldier.ttf') format('truetype');
-  }
-  @font-face{
-    font-family: 'tarrgetlaser';
-    src: url('./fonts/tarrgetlaser.ttf') format('truetype');
-  }
-
- .title__area {
+.title__area {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,7 +72,7 @@ body {
     font-family: 'soldier';
     letter-spacing: .3rem;
     font-size: 1.5rem;
-    color:rgb(189, 185, 185);
+    color: rgb(189, 185, 185);
     background-color: rgb(38, 38, 38);
     border-radius: 10px;
 }
@@ -85,13 +90,13 @@ body {
 }
 
 .vs--window {
-    grid-area: vs--window; 
+    grid-area: vs--window;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'tarrgetlaser'; 
+    font-family: 'tarrgetlaser';
     font-size: 6rem;
-    color:rgb(137, 135, 135)  
+    color: rgb(137, 135, 135)
 }
 
 .banner {
@@ -101,24 +106,25 @@ body {
     align-items: space-between;
     font-family: 'soldier';
     font-size: 3rem;
-    color:rgb(137, 135, 135)  
-  }
+    color: rgb(137, 135, 135)
+}
 
 .selectors {
     grid-area: selectors;
     display: flex;
     justify-content: space-between;
 }
+
 .select__bar {
-    grid-area: select__bar;    
+    grid-area: select__bar;
 }
 
 .user__selection--title {
-    grid-area: user__selection--title;    
+    grid-area: user__selection--title;
 }
 
 .computer__selection--title {
-    grid-area: computer__selection--title;    
+    grid-area: computer__selection--title;
 }
 
 
@@ -130,19 +136,19 @@ body {
 }
 
 .user__score--title {
-    grid-area: user__score--title;    
+    grid-area: user__score--title;
 }
 
 .computer__score--title {
-    grid-area: computer__score--title;    
+    grid-area: computer__score--title;
 }
 
 .user__score--window {
-    grid-area: user__score--window;   
+    grid-area: user__score--window;
 }
 
 .computer__score--window {
-    grid-area: computer__score--window;    
+    grid-area: computer__score--window;
 }
 
 .play__button {
@@ -168,9 +174,8 @@ button img {
     height: auto;
 }
 
-button:hover, 
+button:hover,
 .play__button:hover {
     opacity: .8;
     cursor: pointer;
 }
-
