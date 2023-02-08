@@ -1,0 +1,176 @@
+@font-face{
+    font-family: 'digital-7';
+    src: url('./fonts/digital-7.ttf') format('truetype');
+  }
+@font-face{
+    font-family: 'soldier';
+    src: url('./fonts/soldier.ttf') format('truetype');
+  }
+  @font-face{
+    font-family: 'tarrgetlaser';
+    src: url('./fonts/tarrgetlaser.ttf') format('truetype');
+  }
+
+* {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;    
+}
+
+body {
+    background-image: url("./images/background.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    border: 5px solid rgb(61, 61, 61);
+    background-color: rgb(57, 56, 56);
+    border-radius: 10px;
+    display: grid;
+    grid-template-areas: "banner banner"
+                         "select__bar select__bar"                         
+                         "selectors selectors"
+                         "user__selection--title computer__selection--title"
+                         "selection__windows selection__windows"
+                         "user__score--title computer__score--title"
+                         "user__score--window computer__score--window"
+                         "play__button play__button";
+                         
+    grid-template-rows: 1.5fr 1fr 5fr 5fr 1fr 2fr 1fr 2fr 3fr;
+    gap: 0.5rem;
+    height: 35rem;
+    width: 85%;
+    margin: 2rem;
+    box-shadow: .5rem .5rem 20px rgb(0, 0, 0);
+}
+
+@font-face{
+    font-family: 'digital-7';
+    src: url('./fonts/digital-7.ttf') format('truetype');
+  }
+@font-face{
+    font-family: 'soldier';
+    src: url('./fonts/soldier.ttf') format('truetype');
+  }
+  @font-face{
+    font-family: 'tarrgetlaser';
+    src: url('./fonts/tarrgetlaser.ttf') format('truetype');
+  }
+
+ .title__area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgb(0, 0, 0);
+    font-family: 'soldier';
+    letter-spacing: .3rem;
+    font-size: 1.5rem;
+    color:rgb(189, 185, 185);
+    background-color: rgb(38, 38, 38);
+    border-radius: 10px;
+}
+
+.window__area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    font-family: 'digital-7';
+    font-size: 4rem;
+    color: rgb(2, 190, 2);
+    min-width: 20rem;
+}
+
+.vs--window {
+    grid-area: vs--window; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'tarrgetlaser'; 
+    font-size: 6rem;
+    color:rgb(137, 135, 135)  
+}
+
+.banner {
+    grid-area: banner;
+    display: flex;
+    justify-content: space-around;
+    align-items: space-between;
+    font-family: 'soldier';
+    font-size: 3rem;
+    color:rgb(137, 135, 135)  
+  }
+
+.selectors {
+    grid-area: selectors;
+    display: flex;
+    justify-content: space-between;
+}
+.select__bar {
+    grid-area: select__bar;    
+}
+
+.user__selection--title {
+    grid-area: user__selection--title;    
+}
+
+.computer__selection--title {
+    grid-area: computer__selection--title;    
+}
+
+
+.selection__windows {
+    grid-area: selection__windows;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.user__score--title {
+    grid-area: user__score--title;    
+}
+
+.computer__score--title {
+    grid-area: computer__score--title;    
+}
+
+.user__score--window {
+    grid-area: user__score--window;   
+}
+
+.computer__score--window {
+    grid-area: computer__score--window;    
+}
+
+.play__button {
+    grid-area: play__button;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'soldier';
+    background: linear-gradient(rgb(186, 187, 186), rgb(2, 122, 2));
+    border-radius: 10px;
+    font-size: 5rem;
+}
+
+button {
+    border: .5rem solid black;
+    background-color: white;
+    border-radius: 20px;
+    width: 20rem;
+}
+
+button img {
+    width: 5rem;
+    height: auto;
+}
+
+button:hover, 
+.play__button:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
