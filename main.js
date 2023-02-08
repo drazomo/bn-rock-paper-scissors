@@ -1,64 +1,75 @@
-// Array of Rock, Paper, Scissors options
 const rpsOptions = ['rock', 'paper', 'scissors'];
-// Select all buttons under the class name of ".selectors"
 const playerSelectorBtns = document.querySelectorAll('.selectors button');
-const userSelectionWindow = document.querySelector('window__area_user');
-const computerSelectionWindow = document.querySelector('window_area_computer');
-// Initialize the playerSelection, computerSelection, result, userScore, computerScore, and roundNumber variables
+const userSelectionWindow = document.querySelector('#user__selection');
+const computerSelectionWindow = document.querySelector('#computer__selection');
+const displayComputerScore = document.querySelector('.computer__score--window');
+const displayUserScore = document.querySelector('.user__score--window');
+const playBtn = document.querySelector('.play__button');
+
+const randomizeChoice = () => rpsOptions[Math.floor(Math.random() * 3)];
+
 let playerSelection = '',
 	computerSelection = '',
-	result = '',
 	userScore = 0,
 	computerScore = 0,
 	roundNumber = 0;
 
-// Loop through each button in playerSelectorBtns
 for (const playerBtn of playerSelectorBtns) {
-	// Attach a click event listener to the button
 	playerBtn.addEventListener('click', () => {
-		// Set playerSelection to the value attribute of the clicked button
 		playerSelection = playerBtn.getAttribute('value');
-		// Set computerSelection to a random option from the rpsOptions array
-		computerSelection = rpsOptions[Math.floor(Math.random() * 3)];
-		userSelectionWindow.textContent = playerSelection;
+		computerSelection = randomizeChoice();
 		computerSelectionWindow.textContent = computerSelection;
+		userSelectionWindow.textContent = playerSelection;
+		playRound(playerSelection, computerSelection);
 	});
 }
 
-const game = () => {
-	const playRound = (playerSelection, computerSelection) => {
-		let draw = playerSelection === computerSelection;
-		return draw
-			? 'Draw!'
-			: `${result ? 'Your Point!' : 'Computer Point!'}, ${
-					result ? playerSelection : computerSelection
-			  } beats ${result ? computerSelection : playerSelection}.`;
-	};
+const onResetBtnClick = playBtn.addEventListener('click', () => {
+	playerSelection = '-';
+	computerSelection = '-';
+	userScore = 0;
+	computerScore = 0;
+	roundNumber = 0;
 
-	while (roundNumber < 5) {
-		result = playRound(userResponse, computerSelection);
-		roundNumber++;
+	computerSelectionWindow.textContent = computerSelection;
+	userSelectionWindow.textContent = playerSelection;
+
+	displayComputerScore.textContent = computerScore;
+	displayUserScore.textContent = userScore;
+  
+	playBtn.textContent = 'Fight!';
+
+	for (const btn of playerSelectorBtns) {
+		btn.classList.remove('disabled');
+	}
+});
+
+const playRound = (plyrSelect, compSelect) => {
+	const playerResult = /rockscissors|scissorspaper|paperrock/gi.test(
+		plyrSelect + compSelect
+	);
+	let draw = playerSelection === computerSelection;
+
+	roundNumber++;
+
+	if (roundNumber < 5) {
+		playBtn.classList.add('disabled');
 	}
 
-	if (result.includes('Draw')) {
-		result = 'Draw!';
-	} else if (result.includes('Your')) {
+	if (roundNumber === 5) {
+		for (const btn of playerSelectorBtns) {
+			btn.classList.add('disabled');
+			playBtn.classList.remove('disabled');
+			playBtn.textContent = 'Reset';
+		}
+	}
+
+	if (draw) {
+	} else if (playerResult) {
 		userScore++;
+		displayUserScore.textContent = userScore;
 	} else {
 		computerScore++;
+		displayComputerScore.textContent = computerScore;
 	}
 };
-
-if (roundNumber === 5) {
-	if (userScore > computerScore) console.log('You won the game!');
-	else if (userScore < computerScore) console.log('The computer won the game!');
-	else console.log("It's a draw!");
-	alert(`${
-		userScore > computerScore
-			? 'You won the game!'
-			: userScore < computerScore
-			? 'The computer won the game!'
-			: "It's a draw!"
-	} 
-      Score: You ${userScore} / Computer ${computerScore}`);
-}
