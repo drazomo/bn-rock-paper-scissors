@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'digital-7';
+  src: url('./fonts/digital-7.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'soldier';
+  src: url('./fonts/soldier.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'tarrgetlaser';
+  src: url('./fonts/tarrgetlaser.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'digital-7';
+  src: url('./fonts/digital-7.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'soldier';
+  src: url('./fonts/soldier.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'tarrgetlaser';
+  src: url('./fonts/tarrgetlaser.ttf') format('truetype');
+}
+
+
+* {
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url("./images/background.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+button {
+  border: .5rem solid black;
+  background-color: white;
+  border-radius: 20px;
+  width: 20rem;
+}
+
+button img {
+  width: 5rem;
+  height: auto;
+}
+
+button:hover,
+.play__button:hover {
+  opacity: .8;
+  cursor: pointer;
+}
