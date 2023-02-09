@@ -56,20 +56,19 @@ const playRound = (plyrSelect, compSelect) => {
 		playBtn.classList.add('disabled');
 	}
 
-	if (roundNumber === 5) {
-		for (const btn of playerSelectorBtns) {
-			btn.classList.add('disabled');
-			playBtn.classList.remove('disabled');
-			playBtn.textContent = 'Reset';
-		}
-	}
-
-	if (draw) {
-	} else if (playerResult) {
+	if (draw) {} else if(playerResult) {
 		userScore++;
 		displayUserScore.textContent = userScore;
 	} else {
 		computerScore++;
 		displayComputerScore.textContent = computerScore;
+	}
+
+	if (userScore === 5 || computerScore === 5) {
+		for (const btn of playerSelectorBtns) {
+			btn.classList.add('disabled');
+			playBtn.classList.remove('disabled');
+			playBtn.textContent = 'Reset';
+		}
 	}
 };
