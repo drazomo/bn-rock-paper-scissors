@@ -9,63 +9,64 @@
   <script defer src="./main.js"></script>
   <title>Final: Rock, Paper, Scissors</title>
 </head>
+
 <body>
-     <div class="container">
-          <div class="banner">
-               Rock  /  Paper  /   Scissors
-          </div>
-          <div class="select__bar title__area">
-               Choose Your Weapon:
-          </div>               
-          <section class="selectors">
-               <button class="rock__button">
-                    <picture>
-                         <img src="./images/rock.png">
-                    </picture>
-               </button>
-               <button class="paper__button">
-                    <picture>
-                         <img src="./images/paper.png">
-                    <picture>
-               </button>
-               <button class="scissors__button">
-                    <picture>
-                         <img src="./images/scissors.png">
-                    </picture>
-               </button>
-          </section>
-          <div class="user__selection--title title__area">
-               User Selects:
-          </div>
-          <div class="computer__selection--title title__area">
-              Computer Selects:
-          </div>
-          <section class="selection__windows">
-               <div class="window__area">
-                    -
-               </div>
-               <div class="vs--window">
-                    vs
-               </div>
-               <div class="window__area">
-               -
-               </div>
-          </section>
-          <div class="user__score--title title__area">
-               User Score:
-           </div>
-           <div class="computer__score--title title__area">
-               Computer Score:
-           </div>
-          <div class="user__score--window window__area">
-               0
-          </div>
-          <div class="computer__score--window window__area">
-               0
-          </div>
-           <div class="play__button">
-               Reset
-           </div>        
-     </div>
+  <div class="container">
+    <div class="banner">
+      Rock / Paper / Scissors
+    </div>
+    <div class="select__bar title__area">
+      Choose Your Weapon:
+    </div>
+    <section class="selectors">
+      <button class="rock__button" value="rock">
+        <picture>
+          <img src="./images/rock.png">
+        </picture>
+      </button>
+      <button class="paper__button" value="paper">
+        <picture>
+          <img src="./images/paper.png">
+          <picture>
+      </button>
+      <button class="scissors__button" value="scissors">
+        <picture>
+          <img src="./images/scissors.png">
+        </picture>
+      </button>
+    </section>
+    <div class="user__selection--title title__area">
+      User Selects:
+    </div>
+    <div class="computer__selection--title title__area">
+      Computer Selects:
+    </div>
+    <section class="selection__windows">
+      <div class="window__area" id="user__selection">
+        -
+      </div>
+      <div class="vs--window">
+        vs
+      </div>
+      <div class="window__area" id="computer__selection">
+        -
+      </div>
+    </section>
+    <div class="user__score--title title__area">
+      User Score: <span></span>
+    </div>
+    <div class="computer__score--title title__area">
+      Computer Score: <span></span>
+    </div>
+    <div class="user__score--window window__area">
+      0
+    </div>
+    <div class="computer__score--window window__area">
+      0
+    </div>
+    <div class="play__button">
+      Fight!
+    </div>
+  </div>
 </body>
 </html>

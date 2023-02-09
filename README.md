@@ -1,6 +1,8 @@
 
 # The Final Challenge - Rock, Paper, & Scissors
 
+[Ze live link](https://markrasavong.github.io/bn-vanilla-fe-challenge/)
+
 ![](https://img.shields.io/badge/Name-RockPaperScissors-brightgreen?style=plastic&labelColor=inactive)
 ![](https://img.shields.io/badge/Version-v0.0.1-blueviolet?style=plastic&labelColor=inactive)
 ![](https://img.shields.io/badge/Stack-Vanilla-Frontend-important?style=plastic&labelColor=inactive)
