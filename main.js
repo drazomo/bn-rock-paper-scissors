@@ -4,6 +4,7 @@ const userSelectionWindow = document.querySelector('#user__selection');
 const computerSelectionWindow = document.querySelector('#computer__selection');
 const displayComputerScore = document.querySelector('.computer__score--window');
 const displayUserScore = document.querySelector('.user__score--window');
+const displayWinner = document.querySelector('result__window');
 const playBtn = document.querySelector('.play__button');
 
 const randomizeChoice = () => rpsOptions[Math.floor(Math.random() * 3)];

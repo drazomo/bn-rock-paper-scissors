@@ -10,11 +10,12 @@
         "selectors selectors"
         "user__selection--title computer__selection--title"
         "selection__windows selection__windows"
+        "result__window result__window"
         "user__score--title computer__score--title"
         "user__score--window computer__score--window"
         "play__button play__button";
 
-    grid-template-rows: 2fr 1fr 5fr 2fr 3fr 2fr 3fr 2fr;
+    grid-template-rows: 2fr 1fr 5fr 2fr 3fr 3fr 2fr 3fr 2fr;
     gap: 0.5rem;
     height: 35rem;
     width: 85%;
@@ -37,6 +38,7 @@
 
 .window__area {
     display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
     background-color: rgb(0, 0, 0);
@@ -93,6 +95,11 @@
 
 }
 
+.result__window {
+    grid-area: result__window;
+
+}
+
 .user__score--title {
     grid-area: user__score--title;
 }
@@ -117,7 +124,7 @@
     font-family: 'soldier';
     background: linear-gradient(rgb(186, 187, 186), rgb(2, 122, 2));
     border-radius: 10px;
-    font-size: 4rem;
+    font-size: 2.5rem;
 }
 
 .disabled {
