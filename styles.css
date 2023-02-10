@@ -15,6 +15,7 @@
         "user__score--window computer__score--window"
         "play__button play__button";
 
+    grid-template-rows: 2fr 1fr 5fr 2fr 3fr 3fr 2fr 3fr 3fr;
     gap: 0.5rem;
     height: 35rem;
     width: 85%;
@@ -96,6 +97,7 @@
 
 .result__window {
     grid-area: result__window;
+    font-size: 2rem;
 
 }
 
