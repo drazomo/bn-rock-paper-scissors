@@ -15,7 +15,6 @@
         "user__score--window computer__score--window"
         "play__button play__button";
 
-    grid-template-rows: 2fr 1fr 5fr 2fr 3fr 3fr 2fr 3fr 2fr;
     gap: 0.5rem;
     height: 35rem;
     width: 85%;
