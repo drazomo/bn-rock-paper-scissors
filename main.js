@@ -36,8 +36,6 @@ const onResetBtnClick = playBtn.addEventListener('click', () => {
 
 	displayComputerScore.textContent = computerScore;
 	displayUserScore.textContent = userScore;
-  
-	playBtn.textContent = 'Fight!';
 
 	for (const btn of playerSelectorBtns) {
 		btn.classList.remove('disabled');
@@ -45,24 +43,14 @@ const onResetBtnClick = playBtn.addEventListener('click', () => {
 });
 
 const playRound = (plyrSelect, compSelect) => {
+	playBtn.classList.add('hidden');
 	const playerResult = /rockscissors|scissorspaper|paperrock/gi.test(
 		plyrSelect + compSelect
 	);
+
 	let draw = playerSelection === computerSelection;
 
 	roundNumber++;
-
-	if (roundNumber < 5) {
-		playBtn.classList.add('disabled');
-	}
-
-	if (roundNumber === 5) {
-		for (const btn of playerSelectorBtns) {
-			btn.classList.add('disabled');
-			playBtn.classList.remove('disabled');
-			playBtn.textContent = 'Reset';
-		}
-	}
 
 	if (draw) {
 	} else if (playerResult) {
@@ -71,5 +59,13 @@ const playRound = (plyrSelect, compSelect) => {
 	} else {
 		computerScore++;
 		displayComputerScore.textContent = computerScore;
+	}
+
+	if (userScore === 5 || computerScore === 5) {
+		for (const btn of playerSelectorBtns) {
+			playBtn.classList.toggle('hidden');
+			btn.classList.add('disabled');
+			playBtn.classList.remove('disabled');
+		}
 	}
 };

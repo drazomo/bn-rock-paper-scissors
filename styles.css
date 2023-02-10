@@ -126,6 +126,10 @@
     cursor: not-allowed;
 }
 
+.hidden {
+    display: none;
+}
+
 @media only screen and (max-width: 988px) {
     .container {
       height: 40rem;
@@ -137,3 +141,4 @@
         height: 50rem;
       }
   } 
+
