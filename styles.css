@@ -14,13 +14,11 @@
         "user__score--title computer__score--title"
         "user__score--window computer__score--window"
         "play__button play__button";
-
     grid-template-rows: 2fr 1fr 5fr 2fr 3fr 3fr 2fr 3fr 3fr;
     gap: 0.5rem;
     height: 35rem;
     width: 85%;
     margin: 2rem;
-    box-shadow: .5rem .5rem 20px rgb(0, 0, 0);
 }
 
 .title__area {
@@ -31,7 +29,6 @@
     font-family: 'soldier';
     letter-spacing: .3rem;
     font-size: 1.5rem;
-    color: rgb(189, 185, 185);
     background-color: rgb(38, 38, 38);
     border-radius: 10px;
 }
@@ -45,7 +42,6 @@
     border-radius: 10px;
     font-family: 'digital-7';
     font-size: 3rem;
-    color: rgb(2, 190, 2);
     min-width: 30%;
 }
 
@@ -66,7 +62,6 @@
     align-items: center;
     font-family: 'soldier';
     font-size: 3rem;
-    color: rgb(137, 135, 135)
 }
 
 .selectors {
@@ -123,7 +118,6 @@
     align-items: center;
     justify-content: center;
     font-family: 'soldier';
-    background: linear-gradient(rgb(186, 187, 186), rgb(2, 122, 2));
     border-radius: 10px;
     font-size: 2.5rem;
 }

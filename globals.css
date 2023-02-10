@@ -37,7 +37,6 @@
 }
 
 body {
-  background-image: url("./images/background.png");
   display: flex;
   justify-content: center;
   align-items: center;
