@@ -14,7 +14,6 @@
         "user__score--window computer__score--window"
         "play__button play__button";
 
-    grid-template-rows: 1.5fr 1fr 5fr 5fr 1fr 2fr 1fr 2fr 3fr;
     gap: 0.5rem;
     height: 35rem;
     width: 85%;
@@ -44,7 +43,6 @@
     font-family: 'digital-7';
     font-size: 4rem;
     color: rgb(2, 190, 2);
-    min-width: 20rem;
 }
 
 .vs--window {
@@ -60,8 +58,6 @@
 .banner {
     grid-area: banner;
     display: flex;
-    justify-content: space-around;
-    align-items: space-between;
     font-family: 'soldier';
     font-size: 3rem;
     color: rgb(137, 135, 135)
