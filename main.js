@@ -61,11 +61,9 @@ const playRound = (plyrSelect, compSelect) => {
 	} else if (playerResult) {
 		userScore++;
 		displayUserScore.textContent = userScore;
-		displayWinner.textContent = `You win, ${playerSelection} beats ${computerSelection}`;
 	} else {
 		computerScore++;
 		displayComputerScore.textContent = computerScore;
-		displayWinner.textContent = `You lose, ${computerSelection} beats ${playerSelection}`;
 	}
 
 	if (userScore === 5 || computerScore === 5) {
