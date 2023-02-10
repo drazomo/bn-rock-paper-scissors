@@ -14,6 +14,7 @@
         "user__score--window computer__score--window"
         "play__button play__button";
 
+    grid-template-rows: 2fr 1fr 5fr 2fr 3fr 2fr 3fr 2fr;
     gap: 0.5rem;
     height: 35rem;
     width: 85%;
@@ -43,6 +44,7 @@
     font-family: 'digital-7';
     font-size: 4rem;
     color: rgb(2, 190, 2);
+    min-width: 30%;
 }
 
 .vs--window {
@@ -58,6 +60,8 @@
 .banner {
     grid-area: banner;
     display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: 'soldier';
     font-size: 3rem;
     color: rgb(137, 135, 135)
@@ -121,3 +125,15 @@
     opacity: 0.5;
     cursor: not-allowed;
 }
+
+@media only screen and (max-width: 988px) {
+    .container {
+      height: 40rem;
+    }
+  } 
+  
+  @media only screen and (max-width: 740px) {
+    .container {
+        height: 50rem;
+      }
+  } 

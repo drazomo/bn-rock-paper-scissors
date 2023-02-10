@@ -33,6 +33,7 @@
   font-size: 20px;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 
 body {
@@ -47,6 +48,7 @@ button {
   border: .5rem solid black;
   background-color: white;
   border-radius: 20px;
+  width: 30%;
 }
 
 button img {
@@ -59,3 +61,15 @@ button:hover,
   opacity: .8;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 988px) {
+  * {
+    font-size: 15px;
+  }
+} 
+
+@media only screen and (max-width: 740px) {
+  * {
+    font-size: 10px;
+  }
+} 
