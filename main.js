@@ -14,10 +14,6 @@ let playerSelection = '',
 	computerScore = 0,
 	roundNumber = 0;
 
-	if(roundNumber === 0) {
-		playBtn.classList.add('hidden');
-	} 
-
 for (const playerBtn of playerSelectorBtns) {
 	playerBtn.addEventListener('click', () => {
 		playerSelection = playerBtn.getAttribute('value');
@@ -40,7 +36,6 @@ const onResetBtnClick = playBtn.addEventListener('click', () => {
 
 	displayComputerScore.textContent = computerScore;
 	displayUserScore.textContent = userScore;
-  
 
 	for (const btn of playerSelectorBtns) {
 		btn.classList.remove('disabled');
@@ -48,6 +43,7 @@ const onResetBtnClick = playBtn.addEventListener('click', () => {
 });
 
 const playRound = (plyrSelect, compSelect) => {
+	playBtn.classList.add('hidden');
 	const playerResult = /rockscissors|scissorspaper|paperrock/gi.test(
 		plyrSelect + compSelect
 	);
@@ -56,11 +52,8 @@ const playRound = (plyrSelect, compSelect) => {
 
 	roundNumber++;
 
-	if (roundNumber < 5) {
-		playBtn.classList.add('disabled');
-	}
-
-	if (draw) {} else if(playerResult) {
+	if (draw) {
+	} else if (playerResult) {
 		userScore++;
 		displayUserScore.textContent = userScore;
 	} else {
@@ -70,7 +63,7 @@ const playRound = (plyrSelect, compSelect) => {
 
 	if (userScore === 5 || computerScore === 5) {
 		for (const btn of playerSelectorBtns) {
-			playBtn.classList.remove('hidden');
+			playBtn.classList.toggle('hidden');
 			btn.classList.add('disabled');
 			playBtn.classList.remove('disabled');
 		}
