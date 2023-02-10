@@ -14,7 +14,6 @@
         "user__score--window computer__score--window"
         "play__button play__button";
 
-    grid-template-rows: 2fr 1fr 5fr 2fr 3fr 2fr 3fr 2fr;
     gap: 0.5rem;
     height: 35rem;
     width: 85%;
@@ -117,7 +116,6 @@
     font-family: 'soldier';
     background: linear-gradient(rgb(186, 187, 186), rgb(2, 122, 2));
     border-radius: 10px;
-    font-size: 4rem;
 }
 
 .disabled {
