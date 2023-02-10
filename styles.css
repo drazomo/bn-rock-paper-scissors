@@ -42,7 +42,6 @@
     background-color: rgb(0, 0, 0);
     border-radius: 10px;
     font-family: 'digital-7';
-    font-size: 4rem;
     color: rgb(2, 190, 2);
     min-width: 30%;
 }
@@ -117,7 +116,6 @@
     font-family: 'soldier';
     background: linear-gradient(rgb(186, 187, 186), rgb(2, 122, 2));
     border-radius: 10px;
-    font-size: 5rem;
 }
 
 .disabled {
