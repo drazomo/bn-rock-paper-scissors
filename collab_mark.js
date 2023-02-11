@@ -67,25 +67,6 @@ const finalResult = () => {
 			: "It's a draw!"
 	} 
         Score: You ${userScore} / Computer ${computerScore}`);
-
-	userPlayAgain();
-};
-
-const userPlayAgain = () => {
-	let askPlayAgain = lowerCaseTrim(prompt('Do you want to play again? 😊'));
-	askPlayAgain = prompt('Please answer yes or no.');
-
-	while (askPlayAgain !== 'yes' || askPlayAgain !== 'no') {
-		askPlayAgain = prompt('Please answer yes or no.');
-	}
-
-	if (askPlayAgain === 'yes') {
-		game();
-		roundNumber = 0;
-	}
-	if (askPlayAgain === 'no') {
-		return;
-	}
 };
 
 game();
