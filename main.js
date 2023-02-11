@@ -11,9 +11,9 @@ const randomizeChoice = () => rpsOptions[Math.floor(Math.random() * 3)];
 
 let playerSelection = '',
 	computerSelection = '',
-	userScore = 0,
-	computerScore = 0,
-	roundNumber = 0;
+	usrScore = 0,
+	compScore = 0,
+	roundNum = 0;
 
 for (const playerBtn of playerSelectorBtns) {
 	playerBtn.addEventListener('click', () => {
@@ -21,31 +21,31 @@ for (const playerBtn of playerSelectorBtns) {
 		computerSelection = randomizeChoice();
 		computerSelectionWindow.textContent = computerSelection;
 		userSelectionWindow.textContent = playerSelection;
-		playRound(playerSelection, computerSelection);
+		plyRound(playerSelection, computerSelection);
 	});
 }
 
 const onResetBtnClick = playBtn.addEventListener('click', () => {
 	playerSelection = '-';
 	computerSelection = '-';
-	userScore = 0;
-	computerScore = 0;
-	roundNumber = 0;
+	usrScore = 0;
+	compScore = 0;
+	roundNum = 0;
 
 	displayWinner.textContent = 'Select Rock, Paper or Scissors to Play';
 
 	computerSelectionWindow.textContent = computerSelection;
 	userSelectionWindow.textContent = playerSelection;
 
-	displayComputerScore.textContent = computerScore;
-	displayUserScore.textContent = userScore;
+	displayComputerScore.textContent = compScore;
+	displayUserScore.textContent = usrScore;
 
 	for (const btn of playerSelectorBtns) {
 		btn.classList.remove('disabled');
 	}
 });
 
-const playRound = (plyrSelect, compSelect) => {
+const plyRound = (plyrSelect, compSelect) => {
 	playBtn.classList.add('hidden');
 	const playerResult = /rockscissors|scissorspaper|paperrock/gi.test(
 		plyrSelect + compSelect
@@ -53,22 +53,22 @@ const playRound = (plyrSelect, compSelect) => {
 
 	let draw = playerSelection === computerSelection;
 
-	roundNumber++;
-	const userEndResult = userScore > computerScore;
+	roundNum++;
+	const userEndResult = usrScore > compScore;
 
 	if (draw) {
 		displayWinner.textContent = `Draw!`;
 	} else if (playerResult) {
-		userScore++;
-		displayUserScore.textContent = userScore;
+		usrScore++;
+		displayUserScore.textContent = usrScore;
 		displayWinner.textContent = `You win! ${playerSelection} beats ${computerSelection}`;
 	} else {
-		computerScore++;
-		displayComputerScore.textContent = computerScore;
+		compScore++;
+		displayComputerScore.textContent = compScore;
 		displayWinner.textContent = `You lose! ${computerSelection} beats ${playerSelection}`;
 	}
 
-	if (userScore === 5 || computerScore === 5) {
+	if (usrScore === 5 || compScore === 5) {
 		for (const btn of playerSelectorBtns) {
 			playBtn.classList.toggle('hidden');
 			btn.classList.add('disabled');

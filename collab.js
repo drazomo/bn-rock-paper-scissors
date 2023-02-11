@@ -1,35 +1,46 @@
+const options = ['rock', 'paper', 'scissors'];
+
+let userResponse = '',
+	result = '',
+	userScore = 0,
+	computerScore = 0,
+	roundNumber = 0;
+
+const computerPlay = () => options[Math.floor(Math.random() * 3)];
+
+const userInput = () => {
+	userResponse = prompt(`Round: ${roundNumber + 1}: Rock, paper, or scissors?`);
+
+	if (userResponse !== null) {
+		userResponse = userResponse.toLowerCase().trim();
+	} else {
+		return;
+	}
+};
+
+const playRound = (playerSelection, computerSelection) => {
+	let draw = playerSelection === computerSelection;
+	const result = /rockscissors|scissorspaper|paperrock/gi.test(
+		playerSelection + computerSelection
+	);
+
+	return draw
+		? 'Draw!'
+		: `${result ? 'Your Point!' : 'Computer Point!'}, ${
+				result ? playerSelection : computerSelection
+		  } beats ${result ? computerSelection : playerSelection}.`;
+};
+
+//game
 const game = () => {
-	const options = ['rock', 'paper', 'scissors'];
-	let userResponse = '',
-		result = '',
-		userScore = 0,
-		computerScore = 0,
-		roundNumber = 0;
-
-	const computerPlay = () => options[Math.floor(Math.random() * 3)];
-
-	const playRound = (playerSelection, computerSelection) => {
-		playerSelection = playerSelection.toLowerCase().trim();
-		computerSelection = computerSelection.toLowerCase().trim();
-		while (!options.includes(playerSelection)) {
-			playerSelection = prompt('Please enter a valid option.');
-		}
-
-		let draw = playerSelection === computerSelection;
-		const result = /rockscissors|scissorspaper|paperrock/gi.test(
-			playerSelection + computerSelection
-		);
-
-		return draw
-			? 'Draw!'
-			: `${result ? 'Your Point!' : 'Computer Point!'}, ${
-					result ? playerSelection : computerSelection
-			  } beats ${result ? computerSelection : playerSelection}.`;
-	};
+	alert("Let's play rock, paper, scissors! 😋");
 
 	while (roundNumber < 5) {
-		userResponse = prompt('Rock, paper, or scissors?');
-		if (options.includes(userResponse.toLowerCase().trim())) {
+		userInput();
+
+		if (userResponse === null) {
+			break;
+		} else if (options.includes(userResponse)) {
 			result = playRound(userResponse, computerPlay());
 			alert(result);
 			roundNumber++;
@@ -47,17 +58,16 @@ const game = () => {
 	}
 
 	if (roundNumber === 5) {
-		if (userScore > computerScore) console.log('You won the game!');
-		else if (userScore < computerScore)
-			console.log('The computer won the game!');
-		else console.log("It's a draw!");
-		alert(`${
-			userScore > computerScore
-				? 'You won the game!'
-				: userScore < computerScore
-				? 'The computer won the game!'
-				: "It's a draw!"
-		} 
-      Score: You ${userScore} / Computer ${computerScore}`);
+		alert(
+			`${
+				userScore > computerScore
+					? 'You won the game! 🥳🥳🥳'
+					: userScore < computerScore
+					? 'The computer won the game! 😢😢😢'
+					: "It's a draw!"
+			} Score: You ${userScore} / Computer ${computerScore}`
+		);
 	}
 };
+
+game();
