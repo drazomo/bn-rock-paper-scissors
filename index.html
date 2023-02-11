@@ -1,77 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./styles.css" rel="stylesheet" type="text/css">
-  <script defer src="./main.js"></script>
-  <title>Final: Rock, Paper, Scissors</title>
-</head>
-
-<body>
-  <div class="container">
-    <div class="banner">
-      Rock / Paper / Scissors
-    </div>
-    <div class="select__bar title__area">
-      Choose Your Weapon:
-    </div>
-    <section class="selectors">
-      <button class="rock__button" value="rock">
-        <picture>
-          <img title="Select: Rock" src="./images/rock.png" alt="Select: Rock">
-        </picture>
-      </button>
-      <button class="paper__button" value="paper">
-        <picture>
-          <img title="Select: Paper" src="./images/paper.png" alt="Select: Paper">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles.css" rel="stylesheet" type="text/css">
+    <script defer src="./main.js"></script>
+    <title>Final: Rock, Paper, Scissors</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="banner">
+        Rock / Paper / Scissors
+      </div>
+      <div class="select__bar title__area">
+        Choose Your Weapon:
+      </div>
+      <section class="selectors">
+        <button class="rock__button" value="rock">
           <picture>
-      </button>
-      <button class="scissors__button" value="scissors">
-        <picture>
-          <img title="Scissors" src="./images/scissors.png" alt="Scissors">
-        </picture>
-      </button>
-    </section>
-    <div class="user__selection--title title__area">
-      User Selects:
-    </div>
-    <div class="computer__selection--title title__area">
-      Computer Selects:
-    </div>
-    <section class="selection__windows">
-      <div class="window__area" id="user__selection">
-        -
+            <img title="Select: Rock" src="./images/rock.png" alt="Select: Rock">
+          </picture>
+        </button>
+        <button class="paper__button" value="paper">
+          <picture>
+            <img title="Select: Paper" src="./images/paper.png" alt="Select: Paper">
+            <picture>
+        </button>
+        <button class="scissors__button" value="scissors">
+          <picture>
+            <img title="Scissors" src="./images/scissors.png" alt="Scissors">
+          </picture>
+        </button>
+      </section>
+      <div class="user__selection--title title__area">
+        User Selects:
       </div>
-      <div class="vs--window">
-        vs
+      <div class="computer__selection--title title__area">
+        Computer Selects:
       </div>
-      <div class="window__area" id="computer__selection">
-        -
+      <section class="selection__windows">
+        <div class="window__area" id="user__selection">
+          -
+        </div>
+        <div class="vs--window">
+          vs
+        </div>
+        <div class="window__area" id="computer__selection">
+          -
+        </div>
+      </section>
+      <div class="result__window window__area">
+        Select Rock, Paper or Scissors to Play
       </div>
-    </section>
-    <div class="result__window window__area">
-      Select Rock, Paper or Scissors to Play
+      <div class="user__score--title title__area">
+        User Score: <span></span>
+      </div>
+      <div class="computer__score--title title__area">
+        Computer Score: <span></span>
+      </div>
+      <div class="user__score--window window__area">
+        0
+      </div>
+      <div class="computer__score--window window__area">
+        0
+      </div>
+      <div class="play__button hidden">
+        Reset
+      </div>
     </div>
-    <div class="user__score--title title__area">
-      User Score: <span></span>
-    </div>
-    <div class="computer__score--title title__area">
-      Computer Score: <span></span>
-    </div>
-    <div class="user__score--window window__area">
-      0
-    </div>
-    <div class="computer__score--window window__area">
-      0
-    </div>
-    <div class="play__button hidden">
-      Reset
-    </div>
-
-  </div>
-</body>
-
+  </body>
 </html>
