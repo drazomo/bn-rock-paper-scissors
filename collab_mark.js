@@ -76,14 +76,15 @@ const userPlayAgain = () => {
 	askPlayAgain = prompt('Please answer yes or no.');
 
 	while (askPlayAgain !== 'yes' || askPlayAgain !== 'no') {
-		if (lowerCaseTrim === 'yes') {
-			game();
-			roundNumber = 0;
-		}
+		askPlayAgain = prompt('Please answer yes or no.');
+	}
 
-		if (lowerCaseTrim === 'no') {
-			return;
-		}
+	if (askPlayAgain === 'yes') {
+		game();
+		roundNumber = 0;
+	}
+	if (askPlayAgain === 'no') {
+		return;
 	}
 };
 
