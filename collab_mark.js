@@ -73,13 +73,16 @@ const finalResult = () => {
 
 const userPlayAgain = () => {
 	let askPlayAgain = lowerCaseTrim(prompt('Do you want to play again? 😊'));
+
 	if (lowerCaseTrim === 'yes') {
 		game();
 		roundNumber = 0;
 	} else if (lowerCaseTrim === 'no') {
 		return;
 	} else {
-		askPlayAgain = prompt('Please answer yes or no.');
+		while (askPlayAgain !== 'yes' || askPlayAgain !== 'no') {
+			askPlayAgain = prompt('Please answer yes or no.');
+		}
 	}
 };
 
