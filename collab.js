@@ -60,4 +60,8 @@ const game = () => {
 		} 
       Score: You ${userScore} / Computer ${computerScore}`);
 	}
+
+	if (null) {
+		return;
+	}
 };
